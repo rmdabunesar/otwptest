@@ -92,10 +92,9 @@ $doctors = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Doctors</title>
-    <style>
-        /* Add basic styling if you want — this is optional */
-        body { font-family: 'Lato', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
-    </style>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
