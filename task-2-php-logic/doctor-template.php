@@ -1,22 +1,4 @@
 <?php
-/**
- * TASK 2 — PHP Template Logic
- *
- * This file simulates an ACF (Advanced Custom Fields) data structure.
- * The $doctors array below is similar to what you'd get from
- * get_field('doctors') in WordPress with ACF Pro.
- *
- * YOUR JOB:
- * 1. Loop through the $doctors array using foreach
- * 2. Output proper HTML for each doctor
- * 3. Escape ALL output using esc_html() — this prevents XSS attacks
- * 4. Check expected-output.md for the HTML structure you should produce
- *
- * HOW TO TEST: Run this file in your terminal:
- *   php task-2-php-logic/doctor-template.php
- *
- * Or open it in a browser via XAMPP/MAMP local server.
- */
 
 // ============================================
 // Helper function (simulates WordPress esc_html)
@@ -39,7 +21,6 @@ if (!function_exists('esc_attr')) {
         return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
     }
 }
-
 
 // ============================================
 // DOCTOR DATA (DO NOT MODIFY THIS ARRAY)
@@ -100,7 +81,6 @@ $doctors = [
     ],
 ];
 
-
 // ============================================
 // YOUR CODE GOES BELOW
 // Loop through $doctors and output HTML
@@ -120,24 +100,10 @@ $doctors = [
 <body>
 
 <section class="doctors-section">
+    
     <h2>Meet Our Doctors</h2>
 
-    <!-- START YOUR PHP LOOP HERE -->
-    <!--
-        For each doctor, output:
-        - A container div with class "doctor-card"
-        - An img tag with the photo (use esc_url for src, esc_attr for alt)
-        - An h3 with the doctor's name (use esc_html)
-        - A p tag with the specialty (use esc_html)
-        - A p tag with the bio (use esc_html)
-        - A ul with each credential as an li (use esc_html for each)
-
-        IMPORTANT: Escape ALL dynamic output!
-    -->
-
-
-
-    <!-- END YOUR PHP LOOP HERE -->
+    
 
 </section>
 
