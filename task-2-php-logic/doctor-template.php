@@ -100,10 +100,22 @@ $doctors = [
 <body>
 
 <section class="doctors-section">
-    
+
     <h2>Meet Our Doctors</h2>
 
-    
+    <div class="doctor-card">
+        <img src="https://placehold.co/640x565" alt="Dr. Sarah Mitchell">
+        <h3>Dr. Sarah Mitchell</h3>
+        <p class="specialty">Orthodontics &amp; Invisalign</p>
+        <p class="experience">15+ Years</p>
+        <p class="bio">Dr. Mitchell brings over 15 years of experience...</p>
+        <ul class="credentials">
+            <li>DDS — University of Michigan School of Dentistry</li>
+            <li>Board Certified Orthodontist</li>
+            <li>Invisalign Diamond Provider</li>
+            <li>Member, American Association of Orthodontists</li>
+        </ul>
+    </div>
 
 </section>
 
