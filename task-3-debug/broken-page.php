@@ -24,7 +24,7 @@ $testimonials = [
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $practice_info['name']; ?></title>
+    <title><?php echo htmlspecialchars($practice_info['name']); ?></title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Lato', sans-serif; color: #333; }
@@ -106,8 +106,8 @@ $testimonials = [
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1><?php echo $practice_info['name']; ?></h1>
-        <p><?php echo $practice_info['tagline']; ?></p>
+        <h1><?php echo htmlspecialchars($practice_info['name']); ?></h1>
+        <p><?php echo htmlspecialchars($practice_info['tagline']); ?></p>
     </section>
 
     <!-- Services Section -->
