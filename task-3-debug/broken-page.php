@@ -1,21 +1,4 @@
 <?php
-/**
- * TASK 3 — Debug Challenge
- *
- * This file has 5 bugs. Find them ALL and fix them.
- * Make a SEPARATE COMMIT for each bug fix.
- *
- * Bug categories to look for:
- * - PHP syntax/logic errors
- * - HTML structure errors
- * - CSS errors
- * - Security vulnerabilities (XSS)
- * - Responsive/layout issues
- *
- * Run this file to see which bugs cause visible errors:
- *   php task-3-debug/broken-page.php > output.html
- *   Then open output.html in a browser.
- */
 
 // Simulated data
 $practice_info = [
@@ -106,7 +89,6 @@ $testimonials = [
         }
         .stars { color: gold; font-size: 20px; margin-bottom: 12px; }
 
-        /* BUG IS IN THIS MEDIA QUERY — FIND IT */
         @media (max-width: 768px) {
             .services-grid {
                 flex-direction: column;
