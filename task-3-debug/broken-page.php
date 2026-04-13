@@ -25,6 +25,11 @@ $testimonials = [
 <head>
     <meta charset="UTF-8">
     <title><?php echo htmlspecialchars($practice_info['name']); ?></title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Lato', sans-serif; color: #333; }
