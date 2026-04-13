@@ -150,4 +150,4 @@ $testimonials = [
     </footer>
 
 </body>
-</htm>
+</html>
