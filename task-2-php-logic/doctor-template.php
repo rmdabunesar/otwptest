@@ -103,18 +103,23 @@ $doctors = [
 
     <h2>Meet Our Doctors</h2>
 
-    <div class="doctor-card">
-        <img src="https://placehold.co/640x565" alt="Dr. Sarah Mitchell">
-        <h3>Dr. Sarah Mitchell</h3>
-        <p class="specialty">Orthodontics &amp; Invisalign</p>
-        <p class="experience">15+ Years</p>
-        <p class="bio">Dr. Mitchell brings over 15 years of experience...</p>
-        <ul class="credentials">
-            <li>DDS — University of Michigan School of Dentistry</li>
-            <li>Board Certified Orthodontist</li>
-            <li>Invisalign Diamond Provider</li>
-            <li>Member, American Association of Orthodontists</li>
-        </ul>
+    <div class="doctors-grid">
+        <?php foreach ($doctors as $doctor) : ?>
+            <div class="doctor-card">
+                <img src="<?= esc_url($doctor['photo_url']) ?>" alt="<?= esc_attr($doctor['name']) ?>">
+                <div class="doctor-card__body">
+                    <h3><?= esc_html($doctor['name']) ?></h3>
+                    <p class="specialty"><?= esc_html($doctor['specialty']) ?></p>
+                    <p class="experience"><?= esc_html($doctor['experience']) ?></p>
+                    <p class="bio"><?= esc_html($doctor['bio']) ?></p>
+                    <ul class="credentials">
+                        <?php foreach ($doctor['credentials'] as $credential) : ?>
+                            <li><?= esc_html($credential) ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 
 </section>
