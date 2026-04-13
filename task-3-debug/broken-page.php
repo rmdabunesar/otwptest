@@ -99,14 +99,14 @@ $testimonials = [
                 align-items: center;
             }
             .hero h1 { font-size: 32px; }
-
+        }
     </style>
 </head>
 <body>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1><?php echo htmlspecialchars($practice_info['name']); ?></h1>
+        <h1><?php echo htmlspecialchars($practice_info['name']); ?></h1> 
         <p><?php echo htmlspecialchars($practice_info['tagline']); ?></p>
     </section>
 
