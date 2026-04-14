@@ -325,6 +325,50 @@ ul, ol {
     color: #000000;
 }
 
+
+/* ===============================
+   FAMILY SECTION
+================================= */
+#family_section {
+    color: #FFFFFF;
+    background: #1C5C2B;
+    margin: 200px 0;
+
+    position: relative;
+}
+.wave-top-bg {
+    position: absolute;
+    bottom: 99%;
+    left: 0;
+    z-index: -1;
+}
+.wave-btm-bg {
+    position: absolute;
+    top: 99%;
+    left: 0;
+
+    z-index: -1;
+}
+
+.family_header h2 {
+    color: #F9DD3A;
+}
+
+.family_gallery {
+    gap: 15px;
+    border-radius: 0 100px 0 100px;
+    overflow: hidden;
+    max-height: 350px;
+    margin-top: 60px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+
+
 /* ===============================
    DOCTOR SECTION
 ================================= */
