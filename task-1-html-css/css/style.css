@@ -22,6 +22,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+main {
+    padding: 60px 0;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -37,12 +41,14 @@ ul, ol {
     list-style: none;
 }
 
+.pre-header {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
 
 /* ============================================
-   DESIGN TOKENS (from Figma)
-   These are your CSS variables. Use them!
-   Check the Figma "Global Fonts & Colors" section
-   to fill in any missing color values.
+    VARIABLES, TYPOGRAPHY, AND RESPONSIVE CLASSES
    ============================================ */
 
 :root {
@@ -120,7 +126,7 @@ ul, ol {
     .btn-text   { font-size: 18px; line-height: 28px; }
 }
 
-/* Mobile (320px) */
+/* Mobile (480px) */
 @media (max-width: 480px) {
     .display    { font-size: 40px; line-height: 40px; }
     .h1         { font-size: 36px; line-height: 44px; }
@@ -136,12 +142,186 @@ ul, ol {
 }
 
 
-/* ============================================
-   YOUR CUSTOM STYLES GO BELOW
-   ============================================ */
+/* ===============================
+   SECTION
+================================= */
+.section {
+   max-width: 1440px;
+   margin: 0 auto;
+}
 
-/* START YOUR CSS HERE */
+/* ===============================
+   CONTAINER
+================================= */
+.container {
+   width: 1280px;
+   margin: 0 auto;
+}
 
+/* ===============================
+   GRID CONTAINER
+================================= */
+.grid {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   gap: 20px;
+}
 
+/* ===============================
+   DESKTOP (default)
+================================= */
+.col-1 { grid-column: span 12; } /* full */
+.col-2 { grid-column: span 6; }  /* half */
+.col-3 { grid-column: span 4; }  /* 1/3 */
+.col-4 { grid-column: span 3; }  /* 1/4 */
 
-/* END YOUR CSS HERE */
+/* ===============================
+   TABLET (≤768px)
+================================= */
+@media (max-width: 768px) {
+   .container { padding: 0 40px; }
+   .col-md-1 { grid-column: span 12; }
+   .col-md-2 { grid-column: span 6; }
+   .col-md-3 { grid-column: span 4; }
+   .col-md-4 { grid-column: span 3; }
+}
+
+/* ===============================
+   MOBILE (≤320px)
+================================= */
+@media (max-width: 320px) {
+   .container { padding: 20px; }
+   .col-sm-1 { grid-column: span 12; }
+   .col-sm-2 { grid-column: span 6; }
+   .col-sm-3 { grid-column: span 4; }
+   .col-sm-4 { grid-column: span 3; }
+}
+
+/* ===============================
+   Button & Icon Styles
+================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    border: 5px solid transparent;
+    border-radius: var(--radius-full);
+    transition: var(--transition);
+}
+
+.btn .btn-text {
+    margin: 0 var(--gap-md);
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-full);
+    transition: var(--transition);
+    margin-right: -1px;
+}
+
+.icon-arrow {
+    width: 21px;
+    height: 21px;
+    transition: var(--transition);
+}
+
+.btn-black {
+    background-color: #424448;
+    color: #ffffff;
+}
+
+.btn-black:hover {
+    background-color: #ffffff;
+    color: #030712;
+    border: 5px solid #030712;
+}
+
+.btn-black .icon-circle {
+    background-color: #ffffff;
+}
+
+.btn-black:hover .icon-circle {
+    background-color: #030712;
+}
+
+.btn-black .icon-arrow {
+    fill: #424448;
+}
+
+.btn-black:hover .icon-arrow {
+    fill: #ffffff;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+.hero_content {
+    margin-top: 60px;
+    column-gap: 60px;
+    align-items: center;
+}
+
+.hero_content .content_left h3 {
+    margin: 20px 0;
+}
+
+.hero_content .content_left p {
+    margin: 40px 0;
+}
+
+.hero_steps {
+
+}
+
+/* ===============================
+   DOCTOR SECTION
+================================= */
+.doctor_header {
+    max-width: 818px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: var(--gap-lg);
+}
+
+.doctor_content {
+    margin-top: 60px;
+    column-gap: 60px;
+    align-items: center;
+}
+
+.doctor_card {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.doctor_badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 257px;
+    background-color: #4ECD7B;
+    color: #000000;
+    padding: 30px 24px;
+    border-radius: 40px 0 40px 0;
+}
+
+.doctor_badge p {
+    font-weight: 500;
+}
+
+.doctor_content .content_right {
+    max-width: 540px;
+}
+
+.doctor_content .content_right p {
+    margin: 40px 0;
+}
+
