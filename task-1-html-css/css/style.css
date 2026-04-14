@@ -49,13 +49,13 @@ ul, ol {
     --font-body: 'Lato', sans-serif;
 
     
-    --color-primary: #______;      /* Main brand color (inspect from Figma) */
-    --color-secondary: #______;    /* Secondary color (inspect from Figma) */
-    --color-accent: #______;       /* Accent/highlight color (inspect from Figma) */
-    --color-text: #______;         /* Main text color (inspect from Figma) */
-    --color-text-light: #______;   /* Light/muted text (inspect from Figma) */
+    --color-primary: #38BA44;      /* Main brand color (inspect from Figma) */
+    --color-secondary: #E4A200;    /* Secondary color (inspect from Figma) */
+    --color-accent: #4ECD7B;       /* Accent/highlight color (inspect from Figma) */
+    --color-text: #040712;         /* Main text color (inspect from Figma) */
+    --color-text-light: #727680;   /* Light/muted text (inspect from Figma) */
     --color-white: #FFFFFF;
-    --color-bg-light: #______;     /* Light background sections (inspect from Figma) */
+    --color-bg-light: #CED0D3;     /* Light background sections (inspect from Figma) */
 
     --container-width: 1240px;
     --section-padding: 80px;
@@ -123,22 +123,22 @@ ul, ol {
 }
 
 .section {
-   max-width: 1440px;
-   margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .container {
-   width: 100%;
-   max-width: 1280px;
-   margin: 0 auto;
-   padding: 0 40px;
-   box-sizing: border-box;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .grid {
-   display: grid;
-   grid-template-columns: repeat(12, minmax(0, 1fr));
-   gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .col-1 { grid-column: span 12; } /* full */
@@ -147,7 +147,6 @@ ul, ol {
 .col-4 { grid-column: span 3; }  /* 1/4 */
 
 @media (max-width: 768px) {
-    .section { width: 100%;}
     .container { padding: 0 40px; }
     .col-md-1 { grid-column: span 12; }
     .col-md-2 { grid-column: span 6; }
@@ -156,7 +155,6 @@ ul, ol {
 }
 
 @media (max-width: 320px) {
-    .section { width: 100%;}
     .container { padding: 20px; }
     .col-sm-1 { grid-column: span 12; }
     .col-sm-2 { grid-column: span 6; }
@@ -203,9 +201,9 @@ ul, ol {
 }
 
 .btn-black:hover {
-    background-color: #ffffff;
-    color: #030712;
-    border: 3px solid #030712;
+    background-color: var(--color-white);
+    color: var(--color-text);
+    border: 3px solid var(--color-text);
 }
 
 .btn-black .icon-circle {
@@ -213,11 +211,11 @@ ul, ol {
 }
 
 .btn-black:hover .icon-circle {
-    background-color: #030712;
+    background-color: var(--color-text);
 }
 
 .btn-black .icon-arrow {
-    fill: #424448;
+    fill: var(--color-text-light);
 }
 
 .btn-black:hover .icon-arrow {
@@ -226,14 +224,14 @@ ul, ol {
 
 /* green btn color */
 .btn-green {
-    background-color: #2CD080;
+    background-color: var(--color-accent);
     color: #000000;
 }
 
 .btn-green:hover {
     background-color: transparent;
     color: #ffffff;
-    border: 3px solid #2CD080;
+    border: 3px solid var(--color-accent);
 }
 
 .btn-green .icon-circle {
@@ -241,15 +239,15 @@ ul, ol {
 }
 
 .btn-green:hover .icon-circle {
-    background-color: #2CD080;
+    background-color: var(--color-accent);
 }
 
 .btn-green .icon-arrow {
-    fill: #000000;
+    fill: var(--color-text);
 }
 
 .btn-green:hover .icon-arrow {
-    fill: #000000;
+    fill: var(--color-text);
 }
 
 .pre-header {
@@ -358,28 +356,25 @@ ul, ol {
     margin-bottom: 300px;
 }
 
-#family-section h2 {
-    color: #F9DD3A;
-}
-
-.wave-top-bg {
+#family-section .wave-top-bg {
     position: absolute;
     bottom: 100%;
     right: 0;
     z-index: -1;
 }
-.wave-btm-bg {
+
+#family-section .wave-btm-bg {
     position: absolute;
     top: 100%;
     right: 0;
     z-index: -1;
 }
 
-.family-header h2 {
+#family-section h2 {
     color: #F9DD3A;
 }
 
-.gallery {
+#family-section .gallery {
     gap: 15px;
     border-radius: 0 100px 0 100px;
     overflow: hidden;
@@ -387,7 +382,7 @@ ul, ol {
     margin-top: 60px;
 }
 
-.gallery-item img {
+#family-section .gallery-item img {
     width: 100%;
     height: auto;
 }
@@ -395,25 +390,25 @@ ul, ol {
 /* ===============================
    DOCTOR SECTION
 ================================= */
-#doctor-section{
+#doctor-section {
     position: relative;
     overflow: hidden;
 }
 
-.doctor-bg {
+#doctor-section .doctor-bg {
     position: absolute;
     top: 0;
     right: 0;
     z-index: -2;
 }
 
-.doctor-card {
+#doctor-section .doctor-card {
     position: relative;
     border-radius: 40px;
     overflow: hidden;
 }
 
-.doctor-badge {
+#doctor-section .doctor-badge {
     position: absolute;
     top: 0;
     left: 0;
@@ -424,7 +419,7 @@ ul, ol {
     border-radius: 40px 0 40px 0;
 }
 
-.doctor-badge p {
+#doctor-section .doctor-badge p {
     font-weight: 500;
     margin: 0;
 }
