@@ -274,7 +274,55 @@ ul, ol {
 }
 
 .hero_steps {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
 
+.hero_step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    height: 207px;
+}
+
+.hero_steps .step-1 {
+    color: #38BA44;
+    background-image: url("/otwptest/task-1-html-css/images/step1-bg.png");
+}
+
+.hero_steps .step-2 {
+    color: #526800;
+    background-image: url("/otwptest/task-1-html-css/images/step2-bg.png");
+}
+
+.hero_steps .step-3 {
+    color: #8E4805;
+    background-image: url("/otwptest/task-1-html-css/images/step3-bg.png");
+}
+
+.step_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step_left h4 {
+    width: 90px;
+    height: 90px;
+    background-image: url("/otwptest/task-1-html-css/images/step-icon.png");
+    background-size: 85px auto;
+    background-position: center 10px;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step_right h6 {
+    color: #000000;
 }
 
 /* ===============================
